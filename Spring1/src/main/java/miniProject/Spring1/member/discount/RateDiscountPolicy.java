@@ -2,7 +2,9 @@ package miniProject.Spring1.member.discount;
 
 import miniProject.Spring1.member.Grade;
 import miniProject.Spring1.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private static int discountPrice = 10;
