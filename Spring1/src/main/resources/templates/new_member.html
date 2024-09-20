@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Member Form</title>
+</head>
+<body>
+<h1>Register New Member</h1>
+<form th:action="@{/members/new_form}" method="post">
+
+    <label for="grade">GRADE:</label><br>
+    <select id="grade" name="grade" required>
+        <option value="" disabled selected>등급을 선택하세요</option>
+        <option value="BASIC">BASIC</option>
+        <option value="VIP">VIP</option>
+    </select><br><br>
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

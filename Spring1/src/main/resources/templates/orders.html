@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+</head>
+<body>
+<h1>Order List</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Member Name</th>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Discount Price</th>
+        <th>Final Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 반복문을 사용하여 회원 목록을 출력 -->
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.memberName}"></td>
+        <td th:text="${order.itemName}"></td>
+        <td th:text="${order.itemPrice}"></td>
+        <td th:text="${order.discountPrice}"></td>
+        <td th:text="${order.finalPrice}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

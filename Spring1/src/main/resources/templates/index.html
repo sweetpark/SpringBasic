@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Application - Home</title>
+</head>
+<body>
+<h1>Welcome to Spring Basic Application</h1>
+
+<nav>
+    <ul>
+        <li>
+            <a th:href="@{/members/new_form}">Register New Member</a>
+        </li>
+        <li>
+            <a th:href="@{/members}">View Members</a>
+        </li>
+        <li>
+            <a th:href="@{/orders/create}">Create Order</a>
+        </li>
+        <li>
+            <a th:href="@{/orders}">View Orders</a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
